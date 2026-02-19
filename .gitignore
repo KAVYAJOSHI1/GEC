@@ -1,6 +1,23 @@
-venv/
+# Python
 __pycache__/
-*.pyc
-node_modules/
-db.sqlite3
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
 .env
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
