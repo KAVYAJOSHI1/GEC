@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
-from sentinel.views import POSLogViewSet, AlertViewSet
+from sentinel.views import POSLogViewSet, AlertViewSet, WorkShiftViewSet, SafetyLogViewSet
 
 router = DefaultRouter()
 router.register(r'pos-logs', POSLogViewSet, basename='poslog')
 router.register(r'alerts', AlertViewSet, basename='alert')
+router.register(r'shifts', WorkShiftViewSet, basename='shift')
+router.register(r'safety-logs', SafetyLogViewSet, basename='safetylog')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
